@@ -20,17 +20,18 @@ func main() {
 
 	flag.Parse()
 
-	deployment := opsman.GetFoundationMetadata(*opsmanUser, *opsmanPassword, *opsmanIP)
+	deployment, err := opsman.GetCFDeployment(*opsmanUser, *opsmanPassword, *opsmanIP)
+	if err != nil {
+		log.Fatal(err)
+	}
 	var buf bytes.Buffer
-	err := datadog.StopLightsTemplate(&buf, deployment)
+	err = datadog.StopLightsTemplate(&buf, deployment)
 	if err != nil {
 		log.Fatal(err)
 	}
 	metadata := buf.String()
 
-	result := datadog.CreateStoplightDashboard(*ddAPIKey, *ddAppKey, metadata)
-
-	if result == "" {
+	if _, err := datadog.CreateStoplightDashboard(*ddAPIKey, *ddAppKey, metadata); err != nil {
 		log.Fatal(err)
 	}
 
