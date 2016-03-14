@@ -20,7 +20,26 @@ func main() {
 
 	flag.Parse()
 
-	deployment, err := opsman.GetCFDeployment(*opsmanUser, *opsmanPassword, *opsmanIP)
+	opsmanClient := opsman.New(*opsmanIP, *opsmanUser, *opsmanPassword)
+
+	// Check we are using a supported Ops Man
+	err := opsman.ValidateAPIVersion(opsmanClient)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Get installation settings from Ops Man foundation
+	installation, err := opsmanClient.GetInstallationSettings()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	products, err := opsmanClient.GetProducts()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	deployment, err := opsmanClient.GetCFDeployment(installation, products)
 	if err != nil {
 		log.Fatal(err)
 	}
