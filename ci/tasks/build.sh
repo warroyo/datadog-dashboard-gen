@@ -22,10 +22,12 @@ pushd $fullpath > /dev/null
   echo -e "\n building artifacts..."
   GOOS=linux GOARCH=amd64 go build -ldflags "-X main.version=${version}" -o "out/datadog-dashboard-gen-linux-amd64"
   GOOS=darwin GOARCH=amd64 go build -ldflags "-X main.version=${version}" -o "out/datadog-dashboard-gen-darwin-amd64"
-  GOOS=windows GOARCH=amd64 go build -ldflags "-X main.version=${version}" -o "out/datadog-dashboard-gen-win-amd64"
+  GOOS=windows GOARCH=amd64 go build -ldflags "-X main.version=${version}" -o "out/datadog-dashboard-gen-win-amd64.exe"
 
-  echo -e "\n sha1 of artifact..."
+  echo -e "\n sha1 of artifacts..."
   sha1sum out/datadog-dashboard-gen-linux-amd64
+  sha1sum out/datadog-dashboard-gen-darwin-amd64
+  sha1sum out/datadog-dashboard-gen-win-amd64.exe
 
   mv out/* ${output_dir}/
 popd > /dev/null

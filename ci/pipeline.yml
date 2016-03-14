@@ -15,8 +15,12 @@ jobs:
       - task: build
         file: src/ci/tasks/build.yml
 
-      - put: release
+      - put: release-linux
         params: { file: out/datadog-*-linux-amd64 }
+      - put: release-darwin
+        params: { file: out/datadog-*-darwin-amd64 }
+      - put: release-windows
+        params: { file: out/datadog-*-win-amd64.exe }
       - put: src-out
         params: { repository: src, tag: version/number, tag_prefix: v }
       - put: version
@@ -45,10 +49,26 @@ resources:
       access_key_id: {{release-bucket-access-key}}
       secret_access_key: {{release-bucket-secret-key}}
 
-  - name: release
+  - name: release-linux
     type: s3
     source:
       versioned_file: datadog-dashboard-gen-linux-amd64
+      bucket: datadog-dashboard-gen
+      access_key_id: {{release-bucket-access-key}}
+      secret_access_key: {{release-bucket-secret-key}}
+      
+  - name: release-darwin
+    type: s3
+    source:
+      versioned_file: datadog-dashboard-gen-darwin-amd64
+      bucket: datadog-dashboard-gen
+      access_key_id: {{release-bucket-access-key}}
+      secret_access_key: {{release-bucket-secret-key}}
+      
+  - name: release-windows
+    type: s3
+    source:
+      versioned_file: datadog-dashboard-gen-win-amd64.exe
       bucket: datadog-dashboard-gen
       access_key_id: {{release-bucket-access-key}}
       secret_access_key: {{release-bucket-secret-key}}
