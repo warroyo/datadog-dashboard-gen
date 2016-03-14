@@ -1,5 +1,4 @@
 package: .
 import:
-- package: github.com/benbjohnson/ego
 - package: github.com/onsi/ginkgo
 - package: github.com/onsi/gomega

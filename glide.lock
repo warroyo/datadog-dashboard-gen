@@ -1,8 +1,6 @@
-hash: c2ed96f01a1cc951d2cfd5a8904172612593547a7ee73f7ec42ef534c5e9255a
-updated: 2016-03-13T22:27:23.890158912-06:00
+hash: 0c2c3ef17d04fe8aba037f8b0016ab3f20a3674580105f9ff6568c8c67ad00f8
+updated: 2016-03-14T00:57:12.49840935-06:00
 imports:
-- name: github.com/benbjohnson/ego
-  version: 590dff9742dbd2e134877a5ec2cc915ce5c8aac7
 - name: github.com/onsi/ginkgo
   version: ac3d45ddd7ef5c4d7fc4d037b615a81f4d67981e
 - name: github.com/onsi/gomega
