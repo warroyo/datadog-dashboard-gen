@@ -1,5 +1,5 @@
 hash: 0c2c3ef17d04fe8aba037f8b0016ab3f20a3674580105f9ff6568c8c67ad00f8
-updated: 2016-03-14T00:57:12.49840935-06:00
+updated: 2016-03-14T00:59:48.02304674-06:00
 imports:
 - name: github.com/onsi/ginkgo
   version: ac3d45ddd7ef5c4d7fc4d037b615a81f4d67981e
