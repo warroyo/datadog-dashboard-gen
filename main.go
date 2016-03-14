@@ -43,14 +43,15 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	var buf bytes.Buffer
 	err = datadog.StopLightsTemplate(&buf, deployment)
 	if err != nil {
 		log.Fatal(err)
 	}
-	metadata := buf.String()
 
-	if _, err := datadog.CreateStoplightDashboard(*ddAPIKey, *ddAppKey, metadata); err != nil {
+	dashboardJSON := buf.String()
+	if _, err := datadog.CreateStoplightDashboard(*ddAPIKey, *ddAppKey, dashboardJSON); err != nil {
 		log.Fatal(err)
 	}
 

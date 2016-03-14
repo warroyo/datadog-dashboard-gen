@@ -1,0 +1,9 @@
+---
+platform: linux
+image: docker:///malston/ci-datadog-dashboard-gen
+inputs:
+  - name: src
+run:
+  path: src/ci/tasks/test.sh
+params:
+  project_namespace: github.com/pivotalservices/datadog-dashboard-gen

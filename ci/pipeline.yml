@@ -1,0 +1,54 @@
+---
+jobs:
+  - name: build
+    serial: true
+    plan:
+      - aggregate:
+        - get: src
+          resource: src-in
+          trigger: true
+        - get: version
+          params: { bump: patch }
+
+      - task: test
+        file: src/ci/tasks/test.yml
+      - task: build
+        file: src/ci/tasks/build.yml
+
+      - put: release
+        params: { file: out/datadog-*-linux-amd64 }
+      - put: src-out
+        params: { repository: src, tag: version/number, tag_prefix: v }
+      - put: version
+        params: { file: version/number }
+
+resources:
+  - name: src-in
+    type: git
+    source:
+      uri: https://github.com/pivotalservices/datadog-dashboard-gen
+      branch: master
+
+  - name: src-out
+    type: git
+    source:
+      uri: git@github.com:pivotalservices/datadog-dashboard-gen.git
+      branch: master
+      private_key: {{git-private-key}}
+
+  - name: version
+    type: semver
+    source:
+      initial_version: 0.0.1
+      key: current-version
+      bucket: datadog-dashboard-gen
+      access_key_id: {{release-bucket-access-key}}
+      secret_access_key: {{release-bucket-secret-key}}
+
+  - name: release
+    type: s3
+    source:
+      versioned_file: datadog-dashboard-gen-linux-amd64
+      bucket: datadog-dashboard-gen
+      access_key_id: {{release-bucket-access-key}}
+      secret_access_key: {{release-bucket-secret-key}}
