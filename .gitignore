@@ -24,6 +24,6 @@ _testmain.go
 *.prof
 
 datadog-dashboard-gen
-vendor
+# vendor
 ci/configs/secrets.yml
 .vagrant/
