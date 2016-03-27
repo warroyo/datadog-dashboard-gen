@@ -3417,6 +3417,7 @@
       "font_size": "auto",
       "type": "free_text"
     },
+    <% if len(d.CloudControllerDatabaseJobs) > 0 { %>
     {
       "metric": "",
       "custom_unit": "%",
@@ -3494,6 +3495,8 @@
       "y": 32,
       "calc_func": "raw"
     },
+    <% } %>
+    <% if len(d.CloudControllerDatabaseJobs) > 0 { %>
     {
       "metric": "system.load.1",
       "custom_unit": "%",
@@ -3571,6 +3574,8 @@
       "y": 32,
       "calc_func": "raw"
     },
+    <% } %>
+    <% if len(d.UaaDatabaseJobs) > 0 { %>
     {
       "metric": "",
       "custom_unit": "%",
@@ -3648,6 +3653,8 @@
       "y": 38,
       "calc_func": "raw"
     },
+    <% } %>
+    <% if len(d.UaaDatabaseJobs) > 0 { %>
     {
       "metric": "",
       "custom_unit": "%",
@@ -3725,6 +3732,7 @@
       "y": 38,
       "calc_func": "raw"
     },
+    <% } %>
     {
       "board_id": 52443,
       "title_size": 16,

@@ -1030,342 +1030,374 @@ _, _ = io.WriteString(w, ") * ")
 //line templates/screen/PCF-stoplights-template.json.ego:2686
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.DiegoDatabaseJobs) )))
 //line templates/screen/PCF-stoplights-template.json.ego:2686
-_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 19,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800))\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 14,\n      \"timeframe\": \"1h\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 0,\n      \"title_text\": \"Diego Instances ∆ - 1h\",\n      \"padding\": 8,\n      \"x\": 119,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": -10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": -100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 0,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800))\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": -10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": -100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 21,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800))\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 15,\n      \"timeframe\": \"1h\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 0,\n      \"title_text\": \"Diego App ∆ - 1h\",\n      \"padding\": 8,\n      \"x\": 103,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": -10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": -100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 0,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800))\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": -10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": -100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 21,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"max:datadog.nozzle.bbs.RequestLatency{deployment:cf} / 1000000000\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 17,\n      \"timeframe\": \"15m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"BBS Request Latency\",\n      \"padding\": 8,\n      \"x\": 74,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 2,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"custom_bg_color\": null,\n          \"value\": 2,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.bbs.RequestLatency{deployment:cf} / 1000000000\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 2,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"custom_bg_color\": null,\n                \"value\": 2,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 60,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"datadog.nozzle.bbs.ETCDWatchers\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.ETCDWatchers{deployment:cf}\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 17,\n      \"timeframe\": \"15m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [\n        \"deployment:cf\"\n      ],\n      \"precision\": 2,\n      \"title_text\": \"ETCD Watchers\",\n      \"padding\": 8,\n      \"x\": 74,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 4,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 4,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 3,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": true,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.ETCDWatchers{deployment:cf}\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 4,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 4,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 3,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 68,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.route_emitter.RouteEmitterSyncDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 22,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Router Emitter Sync Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 92,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 6,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 20,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.route_emitter.RouteEmitterSyncDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 20,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 43,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.bbs.ConvergenceLRPDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 22,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Convergence LRP Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 92,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 6,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 20,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.bbs.ConvergenceLRPDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 20,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 51,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.rep.RepBulkSyncDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 19,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Rep Bulk Sync Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 55,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 20,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.rep.RepBulkSyncDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 20,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 60,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Diego Running AIs - 2D\",\n      \"height\": 12,\n      \"tile_def\": {\n        \"viz\": \"timeseries\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}\",\n            \"conditional_formats\": [],\n            \"type\": \"line\"\n          }\n        ]\n      },\n      \"width\": 30,\n      \"timeframe\": \"2d\",\n      \"y\": 7,\n      \"x\": 103,\n      \"legend_size\": \"0\",\n      \"type\": \"timeseries\",\n      \"legend\": false\n    },\n    {\n      \"sizing\": \"fit\",\n      \"title_size\": 16,\n      \"title\": true,\n      \"url\": \"http://cdn.gifbay.com/2014/07/oops_as_someone_who_used_to_work_in_a_foundry_this_is_terrifying-144652.gif\",\n      \"margin\": \"\",\n      \"title_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 27,\n      \"width\": 37,\n      \"y\": 9,\n      \"x\": 164,\n      \"type\": \"image\"\n    },\n    {\n      \"title_size\": 16,\n      \"title\": true,\n      \"color\": \"#4d4d4d\",\n      \"text\": \"PCF-Ops\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 8,\n      \"width\": 37,\n      \"y\": 1,\n      \"x\": 164,\n      \"font_size\": \"auto\",\n      \"type\": \"free_text\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 19,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800))\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 14,\n      \"timeframe\": \"1h\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 0,\n      \"title_text\": \"Diego Instances ∆ - 1h\",\n      \"padding\": 8,\n      \"x\": 119,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": -10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": -100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 0,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsRunning{deployment:cf}.rollup(avg,1800))\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": -10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": -100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 21,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800))\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 15,\n      \"timeframe\": \"1h\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 0,\n      \"title_text\": \"Diego App ∆ - 1h\",\n      \"padding\": 8,\n      \"x\": 103,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": -10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": -100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 0,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800) - hour_before(datadog.nozzle.bbs.LRPsDesired{deployment:cf}.rollup(avg,1800))\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": -10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": -100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 21,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"max:datadog.nozzle.bbs.RequestLatency{deployment:cf} / 1000000000\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 17,\n      \"timeframe\": \"15m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"BBS Request Latency\",\n      \"padding\": 8,\n      \"x\": 74,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 2,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"custom_bg_color\": null,\n          \"value\": 2,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.bbs.RequestLatency{deployment:cf} / 1000000000\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 2,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"custom_bg_color\": null,\n                \"value\": 2,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 60,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"datadog.nozzle.bbs.ETCDWatchers\",\n      \"custom_unit\": null,\n      \"query\": \"avg:datadog.nozzle.bbs.ETCDWatchers{deployment:cf}\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 17,\n      \"timeframe\": \"15m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [\n        \"deployment:cf\"\n      ],\n      \"precision\": 2,\n      \"title_text\": \"ETCD Watchers\",\n      \"padding\": 8,\n      \"x\": 74,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 4,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 4,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 3,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": true,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.ETCDWatchers{deployment:cf}\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 4,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 4,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 3,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 68,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.route_emitter.RouteEmitterSyncDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 22,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Router Emitter Sync Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 92,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 6,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 20,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.route_emitter.RouteEmitterSyncDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 20,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 43,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.bbs.ConvergenceLRPDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 22,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Convergence LRP Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 92,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 6,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 20,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 10,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.bbs.ConvergenceLRPDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 20,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 10,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 51,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"s\",\n      \"query\": \"max:datadog.nozzle.rep.RepBulkSyncDuration{deployment:cf}/1000000000\\n\",\n      \"text_size\": \"auto\",\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 19,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Rep Bulk Sync Duration - 5m max\",\n      \"padding\": 8,\n      \"x\": 55,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 5,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"custom_bg_color\": null,\n          \"value\": 20,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"custom_bg_color\": null,\n          \"value\": 10,\n          \"invert\": false,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"s\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.rep.RepBulkSyncDuration{deployment:cf}/1000000000\\n\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"custom_bg_color\": null,\n                \"value\": 20,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"custom_bg_color\": null,\n                \"value\": 10,\n                \"invert\": false,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 60,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Diego Running AIs - 2D\",\n      \"height\": 12,\n      \"tile_def\": {\n        \"viz\": \"timeseries\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.bbs.LRPsRunning{deployment:cf}\",\n            \"conditional_formats\": [],\n            \"type\": \"line\"\n          }\n        ]\n      },\n      \"width\": 30,\n      \"timeframe\": \"2d\",\n      \"y\": 7,\n      \"x\": 103,\n      \"legend_size\": \"0\",\n      \"type\": \"timeseries\",\n      \"legend\": false\n    },\n    {\n      \"sizing\": \"fit\",\n      \"title_size\": 16,\n      \"title\": true,\n      \"url\": \"http://cdn.gifbay.com/2014/07/oops_as_someone_who_used_to_work_in_a_foundry_this_is_terrifying-144652.gif\",\n      \"margin\": \"\",\n      \"title_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 27,\n      \"width\": 37,\n      \"y\": 9,\n      \"x\": 164,\n      \"type\": \"image\"\n    },\n    {\n      \"title_size\": 16,\n      \"title\": true,\n      \"color\": \"#4d4d4d\",\n      \"text\": \"PCF-Ops\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 8,\n      \"width\": 37,\n      \"y\": 1,\n      \"x\": 164,\n      \"font_size\": \"auto\",\n      \"type\": \"free_text\"\n    },\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3420
+ if len(d.CloudControllerDatabaseJobs) > 0 { 
+//line templates/screen/PCF-stoplights-template.json.ego:3421
+_, _ = io.WriteString(w, "\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3424
  for i, ccDatabaseJob := range d.CloudControllerDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
  if i == len(d.CloudControllerDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.CloudControllerDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3423
+//line templates/screen/PCF-stoplights-template.json.ego:3424
 _, _ = io.WriteString(w, "\",\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"aggregator\": \"min\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 14,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"CCDB\",\n      \"padding\": 8,\n      \"x\": 134,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 4,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"%\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
  for i, ccDatabaseJob := range d.CloudControllerDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
  if i == len(d.CloudControllerDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3469
+//line templates/screen/PCF-stoplights-template.json.ego:3470
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.CloudControllerDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3469
-_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 32,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"system.load.1\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3470
+_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 32,\n      \"calc_func\": \"raw\"\n    },\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3498
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:3499
+_, _ = io.WriteString(w, "\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3499
+ if len(d.CloudControllerDatabaseJobs) > 0 { 
 //line templates/screen/PCF-stoplights-template.json.ego:3500
+_, _ = io.WriteString(w, "\n    {\n      \"metric\": \"system.load.1\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3503
  for i, ccDatabaseJob := range d.CloudControllerDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
  if i == len(d.CloudControllerDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.CloudControllerDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3500
+//line templates/screen/PCF-stoplights-template.json.ego:3503
 _, _ = io.WriteString(w, "\",\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"aggregator\": \"min\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"width\": 10,\n      \"timeframe\": \"1d\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"CCDB - 24h\",\n      \"padding\": 8,\n      \"x\": 148,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 4,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"left\",\n        \"autoscale\": false,\n        \"custom_unit\": \"%\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
  for i, ccDatabaseJob := range d.CloudControllerDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
  if i == len(d.CloudControllerDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  ccDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3546
+//line templates/screen/PCF-stoplights-template.json.ego:3549
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.CloudControllerDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3546
-_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 32,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3549
+_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 32,\n      \"calc_func\": \"raw\"\n    },\n    ")
 //line templates/screen/PCF-stoplights-template.json.ego:3577
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:3578
+_, _ = io.WriteString(w, "\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3578
+ if len(d.UaaDatabaseJobs) > 0 { 
+//line templates/screen/PCF-stoplights-template.json.ego:3579
+_, _ = io.WriteString(w, "\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3582
  for i, uaaDatabaseJob := range d.UaaDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
  if i == len(d.UaaDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.UaaDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3577
+//line templates/screen/PCF-stoplights-template.json.ego:3582
 _, _ = io.WriteString(w, "\",\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"aggregator\": \"min\",\n      \"title_align\": \"center\",\n      \"text_align\": \"center\",\n      \"width\": 14,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"UAADB\",\n      \"padding\": 8,\n      \"x\": 134,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 4,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 1,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"%\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
  for i, uaaDatabaseJob := range d.UaaDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
  if i == len(d.UaaDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3623
+//line templates/screen/PCF-stoplights-template.json.ego:3628
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.UaaDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3623
-_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 1,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 38,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3628
+_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 1,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 38,\n      \"calc_func\": \"raw\"\n    },\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3656
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:3657
+_, _ = io.WriteString(w, "\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3657
+ if len(d.UaaDatabaseJobs) > 0 { 
+//line templates/screen/PCF-stoplights-template.json.ego:3658
+_, _ = io.WriteString(w, "\n    {\n      \"metric\": \"\",\n      \"custom_unit\": \"%\",\n      \"query\": \"( ")
+//line templates/screen/PCF-stoplights-template.json.ego:3661
  for i, uaaDatabaseJob := range d.UaaDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
  if i == len(d.UaaDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.UaaDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3654
+//line templates/screen/PCF-stoplights-template.json.ego:3661
 _, _ = io.WriteString(w, "\",\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"aggregator\": \"min\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"width\": 10,\n      \"timeframe\": \"1d\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"UAADB - 24h\",\n      \"padding\": 8,\n      \"x\": 148,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 4,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 1,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"left\",\n        \"autoscale\": false,\n        \"custom_unit\": \"%\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"( ")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
  for i, uaaDatabaseJob := range d.UaaDatabaseJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
  if i == len(d.UaaDatabaseJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, "}.rollup(avg,60))")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
  } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, "(avg:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, ",job:")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  uaaDatabaseJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, "}.rollup(avg,60)) +")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
  } 
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, ") * ")
-//line templates/screen/PCF-stoplights-template.json.ego:3700
+//line templates/screen/PCF-stoplights-template.json.ego:3707
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  100/len(d.UaaDatabaseJobs) )))
-//line templates/screen/PCF-stoplights-template.json.ego:3700
-_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 1,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 38,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"color\": \"#4d4d4d\",\n      \"text\": \"0 Days Without an Incident\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 3,\n      \"width\": 37,\n      \"y\": 36,\n      \"x\": 164,\n      \"font_size\": \"auto\",\n      \"type\": \"free_text\"\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Top Ephemeral Disk % Used Jobs\",\n      \"height\": 16,\n      \"tile_def\": {\n        \"viz\": \"toplist\",\n        \"requests\": [\n          {\n            \"q\": \"top(max:bosh.healthmonitor.system.disk.ephemeral.percent{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3755
+//line templates/screen/PCF-stoplights-template.json.ego:3707
+_, _ = io.WriteString(w, "\",\n            \"aggregator\": \"min\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 1,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 38,\n      \"calc_func\": \"raw\"\n    },\n    ")
+//line templates/screen/PCF-stoplights-template.json.ego:3735
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:3736
+_, _ = io.WriteString(w, "\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"color\": \"#4d4d4d\",\n      \"text\": \"0 Days Without an Incident\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"title_text\": \"\",\n      \"height\": 3,\n      \"width\": 37,\n      \"y\": 36,\n      \"x\": 164,\n      \"font_size\": \"auto\",\n      \"type\": \"free_text\"\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Top Ephemeral Disk % Used Jobs\",\n      \"height\": 16,\n      \"tile_def\": {\n        \"viz\": \"toplist\",\n        \"requests\": [\n          {\n            \"q\": \"top(max:bosh.healthmonitor.system.disk.ephemeral.percent{deployment:")
+//line templates/screen/PCF-stoplights-template.json.ego:3763
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3755
+//line templates/screen/PCF-stoplights-template.json.ego:3763
 _, _ = io.WriteString(w, "} by {job}, 10, 'max', 'desc')\",\n            \"style\": {\n              \"palette\": \"dog_classic\"\n            },\n            \"conditional_formats\": []\n          }\n        ]\n      },\n      \"width\": 44,\n      \"timeframe\": \"1h\",\n      \"y\": 56,\n      \"x\": 158,\n      \"legend_size\": \"0\",\n      \"type\": \"toplist\",\n      \"legend\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Total Routes\",\n      \"height\": 8,\n      \"tile_def\": {\n        \"viz\": \"timeseries\",\n        \"requests\": [\n          {\n            \"q\": \"avg:datadog.nozzle.router__0.total_routes{*}\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [],\n            \"type\": \"line\"\n          }\n        ]\n      },\n      \"width\": 26,\n      \"timeframe\": \"2d\",\n      \"y\": 89,\n      \"x\": 0,\n      \"legend_size\": \"0\",\n      \"type\": \"timeseries\",\n      \"legend\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Full ERT Job Health List Avg - 1h\",\n      \"height\": 14,\n      \"tile_def\": {\n        \"viz\": \"toplist\",\n        \"requests\": [\n          {\n            \"q\": \"top(min:bosh.healthmonitor.system.healthy{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:3808
+//line templates/screen/PCF-stoplights-template.json.ego:3816
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:3808
+//line templates/screen/PCF-stoplights-template.json.ego:3816
 _, _ = io.WriteString(w, "} by {job}, 200, 'min', 'asc')\",\n            \"style\": {\n              \"palette\": \"dog_classic\"\n            },\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_green\",\n                \"value\": 1,\n                \"comparator\": \">=\"\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"value\": 1,\n                \"comparator\": \"<\"\n              }\n            ]\n          }\n        ]\n      },\n      \"width\": 36,\n      \"timeframe\": \"1h\",\n      \"y\": 43,\n      \"x\": 55,\n      \"legend_size\": \"0\",\n      \"type\": \"toplist\",\n      \"legend\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"refresh_every\": 30000,\n      \"tick_pos\": \"50%\",\n      \"title_align\": \"left\",\n      \"tick_edge\": \"left\",\n      \"text_align\": \"center\",\n      \"title_text\": \"\",\n      \"height\": 5,\n      \"bgcolor\": \"white\",\n      \"html\": \"Front End Health & KPIs\",\n      \"y\": 2,\n      \"x\": 0,\n      \"font_size\": \"18\",\n      \"tick\": false,\n      \"type\": \"note\",\n      \"width\": 54,\n      \"auto_refresh\": false\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"(max:datadog.nozzle.bbs.LRPsRunning{*} + max:cf.collector.HM9000.HM9000.NumberOfRunningInstances{*})\",\n      \"board_id\": 52443,\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"width\": 12,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"legend_size\": \"0\",\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Diego LRPs\",\n      \"padding\": 8,\n      \"x\": 75,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"legend\": false,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"custom_bg\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": \"#241db8\",\n          \"custom_fg_color\": \"white\"\n        },\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 100,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"left\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:datadog.nozzle.bbs.LRPsRunning{*}\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"custom_bg\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": \"#241db8\",\n                \"custom_fg_color\": \"white\"\n              },\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 100,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 35,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"refresh_every\": 30000,\n      \"tick_pos\": \"50%\",\n      \"title_align\": \"left\",\n      \"tick_edge\": \"left\",\n      \"text_align\": \"center\",\n      \"title_text\": \"\",\n      \"height\": 5,\n      \"bgcolor\": \"white\",\n      \"html\": \"Diego Job Health\",\n      \"y\": 2,\n      \"x\": 134,\n      \"font_size\": \"18\",\n      \"tick\": false,\n      \"type\": \"note\",\n      \"width\": 24,\n      \"auto_refresh\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"refresh_every\": 30000,\n      \"tick_pos\": \"50%\",\n      \"title_align\": \"left\",\n      \"tick_edge\": \"left\",\n      \"text_align\": \"center\",\n      \"title_text\": \"\",\n      \"height\": 5,\n      \"bgcolor\": \"white\",\n      \"html\": \"System DB Job Health\",\n      \"y\": 27,\n      \"x\": 134,\n      \"font_size\": \"18\",\n      \"tick\": false,\n      \"type\": \"note\",\n      \"width\": 24,\n      \"auto_refresh\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"refresh_every\": 30000,\n      \"tick_pos\": \"50%\",\n      \"title_align\": \"left\",\n      \"tick_edge\": \"left\",\n      \"text_align\": \"center\",\n      \"title_text\": \"\",\n      \"height\": 5,\n      \"bgcolor\": \"white\",\n      \"html\": \"ERT VM Vitals\",\n      \"y\": 45,\n      \"x\": 134,\n      \"font_size\": \"18\",\n      \"tick\": false,\n      \"type\": \"note\",\n      \"width\": 68,\n      \"auto_refresh\": false\n    },\n    {\n      \"metric\": \"\",\n      \"custom_unit\": null,\n      \"query\": \"(((sum:datadog.nozzle.rep.CapacityTotalMemory{deployment:cf}) -(sum:datadog.nozzle.rep.CapacityRemainingMemory{deployment:cf})) / 0.000001024 ) + (sum:cf.collector.mem_used_bytes{job:dea})\",\n      \"board_id\": 52443,\n      \"title_size\": 13,\n      \"title\": true,\n      \"aggregator\": \"avg\",\n      \"title_align\": \"left\",\n      \"text_align\": \"left\",\n      \"width\": 16,\n      \"timeframe\": \"5m\",\n      \"wrapped\": true,\n      \"legend_size\": \"0\",\n      \"type\": \"query_value\",\n      \"tags\": [],\n      \"precision\": 2,\n      \"title_text\": \"Diego Cell Mem_Used\",\n      \"padding\": 8,\n      \"x\": 87,\n      \"metric_type\": \"standard\",\n      \"autoscale\": true,\n      \"height\": 5,\n      \"legend\": false,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"custom_bg\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 1,\n          \"custom_bg_color\": \"#241db8\",\n          \"custom_fg_color\": \"white\"\n        }\n      ],\n      \"is_valid_query\": false,\n      \"tile_def\": {\n        \"text_align\": \"left\",\n        \"autoscale\": true,\n        \"custom_unit\": null,\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"(((sum:datadog.nozzle.rep.CapacityTotalMemory{deployment:cf})-(sum:datadog.nozzle.rep.CapacityRemainingMemory{deployment:cf}))/0.000001024)\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"custom_bg\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 1,\n                \"custom_bg_color\": \"#241db8\",\n                \"custom_fg_color\": \"white\"\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"avg\",\n      \"y\": 35,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Top CPU User % Jobs\",\n      \"height\": 16,\n      \"tile_def\": {\n        \"viz\": \"toplist\",\n        \"requests\": [\n          {\n            \"q\": \"top(max:bosh.healthmonitor.system.cpu.user{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:4072
+//line templates/screen/PCF-stoplights-template.json.ego:4080
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:4072
+//line templates/screen/PCF-stoplights-template.json.ego:4080
 _, _ = io.WriteString(w, "} by {job}, 10, 'max', 'desc')\",\n            \"style\": {\n              \"palette\": \"dog_classic\"\n            },\n            \"conditional_formats\": []\n          }\n        ]\n      },\n      \"width\": 44,\n      \"timeframe\": \"1h\",\n      \"y\": 80,\n      \"x\": 158,\n      \"legend_size\": \"0\",\n      \"type\": \"toplist\",\n      \"legend\": false\n    },\n    {\n      \"metric\": \"bosh.healthmonitor.system.cpu.user\",\n      \"custom_unit\": \"%\",\n      \"query\": \"max:bosh.healthmonitor.system.cpu.user{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:4091
+//line templates/screen/PCF-stoplights-template.json.ego:4099
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:4091
+//line templates/screen/PCF-stoplights-template.json.ego:4099
 _, _ = io.WriteString(w, "}\",\n      \"text_size\": \"auto\",\n      \"title_size\": 16,\n      \"title\": true,\n      \"aggregator\": \"max\",\n      \"title_align\": \"left\",\n      \"text_align\": \"center\",\n      \"width\": 22,\n      \"timeframe\": \"1h\",\n      \"wrapped\": true,\n      \"type\": \"query_value\",\n      \"tags\": [\n        \"deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:4103
+//line templates/screen/PCF-stoplights-template.json.ego:4111
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:4103
+//line templates/screen/PCF-stoplights-template.json.ego:4111
 _, _ = io.WriteString(w, "\"\n      ],\n      \"precision\": 2,\n      \"title_text\": \"Top CPU User (%) past hour\",\n      \"padding\": 8,\n      \"x\": 158,\n      \"metric_type\": \"standard\",\n      \"autoscale\": false,\n      \"height\": 4,\n      \"conditional_formats\": [\n        {\n          \"palette\": \"white_on_red\",\n          \"comparator\": \">\",\n          \"invert\": false,\n          \"value\": 75,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_yellow\",\n          \"comparator\": \">=\",\n          \"invert\": false,\n          \"value\": 65,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        },\n        {\n          \"palette\": \"white_on_green\",\n          \"comparator\": \"<\",\n          \"invert\": false,\n          \"value\": 65,\n          \"custom_bg_color\": null,\n          \"custom_fg_color\": null\n        }\n      ],\n      \"is_valid_query\": true,\n      \"tile_def\": {\n        \"text_align\": \"center\",\n        \"autoscale\": false,\n        \"custom_unit\": \"%\",\n        \"precision\": 2,\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"max:bosh.healthmonitor.system.cpu.user{deployment:")
-//line templates/screen/PCF-stoplights-template.json.ego:4147
+//line templates/screen/PCF-stoplights-template.json.ego:4155
 _, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  d.Release )))
-//line templates/screen/PCF-stoplights-template.json.ego:4147
+//line templates/screen/PCF-stoplights-template.json.ego:4155
 _, _ = io.WriteString(w, "}\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"comparator\": \">\",\n                \"invert\": false,\n                \"value\": 75,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"comparator\": \">=\",\n                \"invert\": false,\n                \"value\": 65,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"comparator\": \"<\",\n                \"invert\": false,\n                \"value\": 65,\n                \"custom_bg_color\": null,\n                \"custom_fg_color\": null\n              }\n            ]\n          }\n        ]\n      },\n      \"res_calc_func\": \"raw\",\n      \"aggr\": \"max\",\n      \"y\": 74,\n      \"calc_func\": \"raw\"\n    },\n    {\n      \"board_id\": 52443,\n      \"autoscale\": true,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"Failed Stages per/min (past 30 Min)\",\n      \"height\": 6,\n      \"tile_def\": {\n        \"viz\": \"query_value\",\n        \"requests\": [\n          {\n            \"q\": \"per_minute(max:datadog.nozzle.stager.StagingRequestsFailed{deployment:cf})\",\n            \"aggregator\": \"max\",\n            \"conditional_formats\": [\n              {\n                \"palette\": \"white_on_red\",\n                \"value\": 5,\n                \"comparator\": \">\"\n              },\n              {\n                \"palette\": \"white_on_yellow\",\n                \"value\": 1,\n                \"comparator\": \">=\"\n              },\n              {\n                \"palette\": \"white_on_green\",\n                \"value\": 0,\n                \"comparator\": \"<\"\n              }\n            ]\n          }\n        ],\n        \"precision\": \"0\"\n      },\n      \"width\": 30,\n      \"timeframe\": \"30m\",\n      \"y\": 32,\n      \"x\": 103,\n      \"legend_size\": \"0\",\n      \"type\": \"query_value\",\n      \"legend\": false\n    },\n    {\n      \"board_id\": 52443,\n      \"title_size\": 16,\n      \"title\": true,\n      \"refresh_every\": 30000,\n      \"tick_pos\": \"50%\",\n      \"title_align\": \"left\",\n      \"tick_edge\": \"left\",\n      \"text_align\": \"center\",\n      \"title_text\": \"\",\n      \"height\": 5,\n      \"bgcolor\": \"white\",\n      \"html\": \"GO Router KPIs\",\n      \"y\": 33,\n      \"x\": 0,\n      \"font_size\": \"18\",\n      \"tick\": false,\n      \"type\": \"note\",\n      \"width\": 54,\n      \"auto_refresh\": false\n    },\n    {\n      \"board_id\": 66559,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"center\",\n      \"title_text\": \"Router Latency (ms) 30Mins\",\n      \"height\": 20,\n      \"tile_def\": {\n        \"viz\": \"timeseries\",\n        \"requests\": [")
-//line templates/screen/PCF-stoplights-template.json.ego:4256
+//line templates/screen/PCF-stoplights-template.json.ego:4264
  for i, routerJob := range d.RouterJobs { 
-//line templates/screen/PCF-stoplights-template.json.ego:4256
+//line templates/screen/PCF-stoplights-template.json.ego:4264
  if i == len(d.RouterJobs) - 1 { 
-//line templates/screen/PCF-stoplights-template.json.ego:4257
-_, _ = io.WriteString(w, "\n          {\n            \"q\": \"avg:datadog.nozzle.router__0.latency{deployment:cf,job:")
-//line templates/screen/PCF-stoplights-template.json.ego:4258
-_, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  routerJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:4258
-_, _ = io.WriteString(w, "}\",\n            \"type\": \"line\"\n          }")
-//line templates/screen/PCF-stoplights-template.json.ego:4260
- } else { 
-//line templates/screen/PCF-stoplights-template.json.ego:4261
-_, _ = io.WriteString(w, "\n          {\n            \"q\": \"avg:datadog.nozzle.router__0.latency{deployment:cf,job:")
-//line templates/screen/PCF-stoplights-template.json.ego:4262
-_, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  routerJob )))
-//line templates/screen/PCF-stoplights-template.json.ego:4262
-_, _ = io.WriteString(w, "}\",\n            \"type\": \"line\"\n          },")
-//line templates/screen/PCF-stoplights-template.json.ego:4264
- } 
-//line templates/screen/PCF-stoplights-template.json.ego:4264
- } 
 //line templates/screen/PCF-stoplights-template.json.ego:4265
+_, _ = io.WriteString(w, "\n          {\n            \"q\": \"avg:datadog.nozzle.router__0.latency{deployment:cf,job:")
+//line templates/screen/PCF-stoplights-template.json.ego:4266
+_, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  routerJob )))
+//line templates/screen/PCF-stoplights-template.json.ego:4266
+_, _ = io.WriteString(w, "}\",\n            \"type\": \"line\"\n          }")
+//line templates/screen/PCF-stoplights-template.json.ego:4268
+ } else { 
+//line templates/screen/PCF-stoplights-template.json.ego:4269
+_, _ = io.WriteString(w, "\n          {\n            \"q\": \"avg:datadog.nozzle.router__0.latency{deployment:cf,job:")
+//line templates/screen/PCF-stoplights-template.json.ego:4270
+_, _ = io.WriteString(w, html.EscapeString(fmt.Sprintf("%v",  routerJob )))
+//line templates/screen/PCF-stoplights-template.json.ego:4270
+_, _ = io.WriteString(w, "}\",\n            \"type\": \"line\"\n          },")
+//line templates/screen/PCF-stoplights-template.json.ego:4272
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:4272
+ } 
+//line templates/screen/PCF-stoplights-template.json.ego:4273
 _, _ = io.WriteString(w, "\n        ],\n        \"markers\": [\n          {\n            \"dim\": \"y\",\n            \"type\": \"error dashed\",\n            \"val\": 0,\n            \"value\": \"y = 0\"\n          }\n        ]\n      },\n      \"width\": 54,\n      \"timeframe\": \"30m\",\n      \"y\": 39,\n      \"x\": 0,\n      \"legend_size\": \"0\",\n      \"type\": \"timeseries\",\n      \"legend\": true\n    },\n    {\n      \"board_id\": 66559,\n      \"title_size\": 16,\n      \"title\": true,\n      \"title_align\": \"left\",\n      \"title_text\": \"App Requests /sec past 30min\",\n      \"height\": 11,\n      \"tile_def\": {\n        \"viz\": \"timeseries\",\n        \"requests\": [\n          {\n            \"q\": \"per_second(avg:datadog.nozzle.router__0.total_requests{deployment:cf})\",\n            \"aggregator\": \"avg\",\n            \"conditional_formats\": [],\n            \"type\": \"line\"\n          }\n        ]\n      },\n      \"width\": 54,\n      \"timeframe\": \"30m\",\n      \"y\": 62,\n      \"x\": 0,\n      \"legend_size\": \"0\",\n      \"type\": \"timeseries\",\n      \"legend\": false\n    }\n  ],\n  \"shared\": false,\n  \"id\": 66559,\n  \"title_edited\": false\n}\n")
 return nil
 }
