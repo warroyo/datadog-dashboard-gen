@@ -29,6 +29,13 @@ var _ = Describe("Deployment", func() {
 
 			It("should populate the fields correctly", func() {
 				Expect(deployment.Release).To(Equal("cf-6455120728b109a1086c"))
+				Expect(deployment.CloudControllerDatabaseJobs).To(HaveLen(1))
+				Expect(deployment.CloudControllerJobs).To(HaveLen(1))
+				Expect(deployment.DiegoBrainJobs).To(HaveLen(1))
+				Expect(deployment.DiegoCellJobs).To(HaveLen(2))
+				Expect(deployment.DiegoDatabaseJobs).To(HaveLen(1))
+				Expect(deployment.RouterJobs).To(HaveLen(1))
+				Expect(deployment.UaaDatabaseJobs).To(HaveLen(1))
 				Expect(deployment.UaaJobs).To(HaveLen(1))
 			})
 
