@@ -1,4 +1,4 @@
-package: .
+package: github.com/pivotalservices/datadog-dashboard-gen
 import:
 - package: github.com/onsi/ginkgo
 - package: github.com/onsi/gomega
