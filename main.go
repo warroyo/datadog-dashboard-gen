@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"log"
 
 	"github.com/pivotalservices/datadog-dashboard-gen/datadog"
@@ -17,6 +18,7 @@ func main() {
 	opsmanIP := flag.String("opsman_ip", "192.168.200.10", "Ops Manager IP")
 	ddAPIKey := flag.String("ddapikey", "12345-your-api-key-6789", "Datadog API Key")
 	ddAppKey := flag.String("ddappkey", "12345-your-app-key-6789", "Datadog Application Key")
+	saveFile := flag.String("save_as", "", "Save generated dashboard on local disk")
 
 	flag.Parse()
 
@@ -50,7 +52,14 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if *saveFile != "" {
+		err := ioutil.WriteFile(*saveFile, buf.Bytes(), 0644)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
 	dashboardJSON := buf.String()
+
 	if _, err := datadog.CreateStoplightDashboard(*ddAPIKey, *ddAppKey, dashboardJSON); err != nil {
 		log.Fatal(err)
 	}
