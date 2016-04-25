@@ -22,6 +22,7 @@ func New(opsmanIP, opsmanUsername, opsmanPassword string) *Client {
 	}
 }
 
+// GetAPIVersion returns the Ops Man API version
 func (c *Client) GetAPIVersion() (string, error) {
 	url := "https://" + c.opsmanIP + "/api/api_version"
 	resp, err := http.SendRequest("GET", url, c.opsmanUsername, c.opsmanPassword, "")
