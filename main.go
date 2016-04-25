@@ -18,6 +18,7 @@ func main() {
 	opsmanIP := flag.String("opsman_ip", "192.168.200.10", "Ops Manager IP")
 	ddAPIKey := flag.String("ddapikey", "12345-your-api-key-6789", "Datadog API Key")
 	ddAppKey := flag.String("ddappkey", "12345-your-app-key-6789", "Datadog Application Key")
+	useOpsMetrics := flag.Bool("use_ops_metrics", false, "Generate template from an PCF Ops Metrics deployment")
 	saveFile := flag.String("save_as", "", "Save generated dashboard on local disk")
 
 	flag.Parse()
@@ -47,7 +48,11 @@ func main() {
 	}
 
 	var buf bytes.Buffer
-	err = datadog.StopLightsTemplate(&buf, deployment)
+	if *useOpsMetrics {
+		err = datadog.StopLightsOpsMetricsTemplate(&buf, deployment)
+	} else {
+		err = datadog.StopLightsTemplate(&buf, deployment)
+	}
 	if err != nil {
 		log.Fatal(err)
 	}
